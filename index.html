@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+
+<body>
+    <!-- Menu Burger -->
+    <div class="burger-menu">
+        <div class="burger-icon-wrapper">
+            <svg class="burger-circle" width="48" height="48" viewBox="0 0 48 48">
+                <circle cx="24" cy="24" r="20" fill="none" stroke="#ee2540" stroke-width="3" />
+            </svg>
+            <div class="burger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Menu Navigation -->
+    <div class="menu-overlay">
+        <nav class="menu-content">
+            <ul>
+                <li>
+                    <button class="menu-button" data-href="#hero">Accueil</button>
+                </li>
+                <li>
+                    <button class="menu-button" data-href="#team">Chaos Cactus</button>
+                </li>
+                <li>
+                    <button class="menu-button" data-href="#presentation">
+                        Golfslinger
+                    </button>
+                </li>
+                <li>
+                    <button class="menu-button" data-href="#chaos-reactor">
+                        Chaos Reactor
+                    </button>
+                </li>
+                <li>
+                    <button class="menu-button" data-href="#our-team">L'Équipe</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Fixed Logo -->
+    <div class="fixed-logo">
+        <a href="#hero">
+            <img src="images_chaoscactus/logo_ChaosCactus.png" alt="Chaos Cactus Logo" />
+        </a>
+    </div>
+
+    <!-- Loading Screen -->
+    <div class="loading-screen">
+        <div class="loading-content">
+            <div class="wave-cubes-loader">
+                <div class="cube darkred"></div>
+                <div class="cube black"></div>
+                <div class="cube darkred"></div>
+                <div class="cube black"></div>
+                <div class="cube darkred"></div>
+            </div>
+            <div class="progress-bar-container">
+                <div class="progress-bar"></div>
+            </div>
+            <div class="progress-text">0%</div>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section avec vidéo -->
+        <section class="hero" id="hero">
+            <video autoplay muted loop id="hero-video">
+                <source src="video_chaoscactus/header-principal.mp4" type="video/mp4" />
+                Votre navigateur ne supporte pas la lecture de vidéos.
+            </video>
+            <div class="hero-content"></div>
+        </section>
+
+        <!-- Section Chaos Cactus Studio -->
+        <section class="team-section" id="team">
+            <div class="team-container">
+                <div class="studio-presentation">
+                    <h2 class="studio-title">Chaos Cactus</h2>
+                    <p class="studio-description">
+                        Studio de jeux vidéo indépendant français, nous créons des
+                        expériences de jeu uniques qui défient les conventions. Notre
+                        passion : concevoir des univers captivants avec des mécaniques de
+                        jeu innovantes.
+                    </p>
+                </div>
+
+                <div class="studio-mascots">
+                    <div class="mascot">
+                        <img src="images_chaoscactus/Mascotte_-_Fuego.png" alt="Fuego" />
+                    </div>
+                    <div class="mascot">
+                        <img src="images_chaoscactus/Mascotte_-_Piko.png" alt="Piko" />
+                    </div>
+                </div>
+
+                <div class="studio-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Game Design</h3>
+                            <p>
+                                Des mécaniques de jeu innovantes et addictives qui repoussent
+                                les limites de la créativité.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Direction Artistique</h3>
+                            <p>
+                                Des univers uniques et mémorables avec une identité visuelle
+                                forte et distinctive.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="value-content">
+                            <h3>Expérience</h3>
+                            <p>
+                                Des jeux immersifs et captivants qui offrent une expérience
+                                inoubliable aux joueurs.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Présentation Golfslinger -->
+        <section class="presentation" id="presentation">
+            <div class="presentation-container">
+                <div class="presentation-text">
+                    <h1 class="game-title">Golfslinger</h1>
+                    <p class="game-description">
+                        GolfSlinger est un jeu d’arcade multijoueur qui revisite le golf avec une touche explosive et
+                        déjantée ! Affrontez des adversaires du monde entier dans des parties rapides, fun et
+                        stratégiques, où chaque coup compte – littéralement.<br><br>
+                        💥 <b>Lancez, visez, frappez :</b> Utilisez des slingshots (frondes) pour propulser votre balle
+                        sur des parcours variés remplis d’obstacles, de bonus et de raccourcis surprenants.<br><br>
+                        🧠 <b>Jouez tactique :</b> Ce n’est pas seulement une question de puissance, mais aussi de
+                        précision et de stratégie. Choisissez le bon angle, anticipez vos rebonds, et dominez vos
+                        adversaires.<br><br>
+                        🎮 <b>Mode multijoueur en temps réel :</b> Défiez vos amis ou des joueurs en ligne dans des
+                        matchs rapides et compétitifs. Grimpez dans les classements et débloquez de nouveaux équipements
+                        !<br><br>
+                        🌎 <b>Des parcours uniques :</b> Découvrez des terrains inspirés de lieux exotiques, avec des
+                        mécaniques de jeu originales à chaque niveau.
+                    </p>
+                </div>
+
+                <div class="presentation-media">
+                    <div class="video-container">
+                        <video autoplay muted loop id="presentation-video">
+                            <source src="video_chaoscactus/projet-golfsinger.mp4" type="video/mp4" />
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="https://store.steampowered.com/app/3174490/Golfslinger/?l=french"
+                            class="nav-btn steam-btn" title="Voir sur Steam" target="_blank" rel="noopener">
+                            <i class="fab fa-steam"></i>
+                        </a>
+                        <a href="golfslinger.html" class="nav-btn game-btn" title="Découvrir le jeu">
+                            <i class="fas fa-gamepad"></i>
+                        </a>
+                        <a href="https://www.youtube.com/@ChaosCactusGame/videos" class="nav-btn youtube-btn"
+                            title="Voir sur YouTube" target="_blank" rel="noopener">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Chaos Reactor -->
+        <section class="presentation chaos-reactor" id="chaos-reactor">
+            <div class="presentation-container">
+                <div class="presentation-text">
+                    <h1 class="game-title">Chaos Reactor</h1>
+                    <p class="game-description">
+                        Chaos Réactor est un jeu coopératif explosif où une bande de gobelins surexcités doit empêcher
+                        un réacteur instable d’imploser… en accomplissant des tâches absurdes dans un chaos total
+                        !<br><br>
+                        👺 <b>Gobelins & chaos :</b> Activez des leviers, réparez des tuyaux, transportez des liquides
+                        instables… tout doit aller vite, en équipe, et sans paniquer (trop).<br><br>
+                        🤝 <b>Entraide… ou presque :</b> Coopérez pour maintenir le réacteur sous contrôle, mais
+                        attendez-vous à des ratés hilarants et des explosions surprises !<br><br>
+                        💣 <b>Un chaos organisé :</b> Plus vous avancez, plus les tâches deviennent folles et le rire
+                        inévitable.<br><br>
+                        🎨 <b>Univers fun :</b> Gobelins colorés, décor industriel délirant, et bande-son dynamique pour
+                        une expérience coopérative pleine d’énergie.
+                    </p>
+                    <div class="project-features">
+                        <h3>En cours de développement</h3>
+                        <ul>
+                            <li>
+                                <i class="fas fa-cog"></i> Système de gestion de ressources
+                                complexe
+                            </li>
+                            <li>
+                                <i class="fas fa-random"></i> Événements aléatoires dynamiques
+                            </li>
+                            <li>
+                                <i class="fas fa-project-diagram"></i> Arbre de développement
+                                technologique
+                            </li>
+                            <li>
+                                <i class="fas fa-users"></i> Mode multijoueur en conception
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="presentation-media">
+                    <div class="video-container development-overlay">
+                        <video autoplay muted loop id="reactor-video">
+                            <source src="video/" type="video/mp4" />
+                            Votre navigateur ne supporte pas la lecture de vidéos.
+                        </video>
+                        <div class="development-badge">
+                            <span>Alpha</span>
+                        </div>
+                    </div>
+                    <div class="nav-buttons">
+                        <a href="chaos-reactor.html" class="nav-btn game-btn" title="Découvrir le jeu">
+                            <i class="fas fa-gamepad"></i>
+                        </a>
+                        <a href="#" class="nav-btn github-btn" title="Suivre le développement">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="nav-btn discord-btn" title="Rejoindre la communauté">
+                            <i class="fab fa-discord"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Notre Équipe -->
+        <section class="team-members-section" id="our-team">
+            <div class="team-members-container">
+                <h2 class="section-title">Notre Équipe</h2>
+                <div class="team-grid">
+                    <!-- Membre 1 -->
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="member-image">
+                                <img src="images_chaoscactus/logo_ChaosCactus.png" alt="Membre 1" />
+                            </div>
+                            <h3 class="member-name">Alix</h3>
+                            <p class="member-role">Game Director & Game Designer</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="member-bio">
+                                chef d’orchestre du développement d’un jeu vidéo. Une vision globale du projet et
+                                s’assure
+                                que tous les éléments du jeu (gameplay, narration, visuels, son, technique, etc.)
+                                s’alignent sur cette vision.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membre 2 -->
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="member-image">
+                                <img src="images_chaoscactus/logo_ChaosCactus.png" alt="Membre 2" />
+                            </div>
+                            <h3 class="member-name">Damien</h3>
+                            <p class="member-role">Lead Programmer</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="member-bio">
+                                Lead Programmer : responsable de la partie technique du projet. Il s’occupe de la
+                                programmation du jeu, de la gestion des ressources et de l’optimisation du code.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-artstation"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-behance"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membre 3 -->
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="member-image">
+                                <img src="images_chaoscactus/logo_ChaosCactus.png" alt="Membre 3" />
+                            </div>
+                            <h3 class="member-name">Lucas</h3>
+                            <p class="member-role">Artiste</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="member-bio">
+                                Artiste 3D spécialisé dans la création de personnages et
+                                d'environnements stylisés.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-linkedin"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-medium"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Membre 4 -->
+                    <div class="team-card">
+                        <div class="card-front">
+                            <div class="member-image">
+                                <img src="images_chaoscactus/logo_ChaosCactus.png" alt="Membre 4" />
+                            </div>
+                            <h3 class="member-name">Chloé</h3>
+                            <p class="member-role">Artiste</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="member-bio">
+                                Artiste 3D spécialisé dans la création de personnages et
+                                d'environnements stylisés.
+                            </p>
+                            <div class="member-social">
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-soundcloud"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-spotify"></i>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <i class="fab fa-bandcamp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Navigation flottante -->
+    <nav class="floating-nav">
+        <ul>
+            <li data-section="hero">
+                <span class="nav-dot"></span>
+                <span class="nav-label">Accueil</span>
+            </li>
+            <li data-section="team">
+                <span class="nav-dot"></span>
+                <span class="nav-label">Chaos Cactus</span>
+            </li>
+            <li data-section="presentation">
+                <span class="nav-dot"></span>
+                <span class="nav-label">Golfslinger</span>
+            </li>
+            <li data-section="chaos-reactor">
+                <span class="nav-dot"></span>
+                <span class="nav-label">Chaos Reactor</span>
+            </li>
+            <li data-section="our-team">
+                <span class="nav-dot"></span>
+                <span class="nav-label">L'Équipe</span>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="scroll-indicator">
+        <div class="scroll-arrow"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

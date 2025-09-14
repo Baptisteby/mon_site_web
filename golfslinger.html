@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GolfSlinger - Présentation du jeu</title>
+    <link rel="stylesheet" href="style-golfslinger.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="gs-header">
+        <div class="gs-header-animated-bg"></div>
+        <button class="gs-burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="gs-nav-menu">
+            <span class="gs-burger-bar"></span>
+            <span class="gs-burger-bar"></span>
+            <span class="gs-burger-bar"></span>
+        </button>
+        <nav class="gs-nav-menu" id="gs-nav-menu" aria-hidden="true">
+            <ul>
+                <li><a href="#presentation">Présentation</a></li>
+                <li><a href="#date">Date de sortie</a></li>
+                <li><a href="#genres">Genres</a></li>
+                <li><a href="#config">Configuration requise</a></li>
+                <li><a href="#ambiance">Ambiance visuelle</a></li>
+                <li><a href="#gameplay">Gameplay</a></li>
+            </ul>
+        </nav>
+        <div class="gs-header-main gs-header-modern">
+            <div class="gs-header-content">
+                <h1 class="gs-title-animated western-flicker">GolfSlinger</h1>
+                <p class="gs-slogan gs-slogan-animated">Le Far West rencontre le mini-golf explosif !</p>
+                <div class="gs-header-subtitle">Préparez vos révolvers... et vos balles !</div>
+                <div class="gs-btns-header">
+                    <a href="https://store.steampowered.com/app/3174490/Golfslinger/?l=french" class="gs-btn-steam"
+                        target="_blank" rel="noopener">
+                        <img src="https://cdn.jsdelivr.net/gh/edent/SuperTinyIcons/images/svg/steam.svg" alt="Steam"
+                            class="gs-btn-icon"> Acheter sur Steam
+                    </a>
+                    <a href="https://www.youtube.com/@ChaosCactusGame" class="gs-btn-yt" target="_blank" rel="noopener">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/42/YouTube_icon_%282013-2017%29.png"
+                            alt="YouTube" class="gs-btn-icon"> YouTube
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section class="gs-presentation" id="presentation">
+            <h2>Présentation</h2>
+            <p class="gs-presentation-animated">
+                <strong>GolfSlinger</strong> n'est pas un simple jeu de golf : c'est un duel explosif dans un univers
+                Westernpunk déjanté !<br>
+                Utilisez des gadgets farfelus, des explosions et des coups spéciaux pour propulser vos balles à travers
+                des parcours truffés de pièges et de surprises.<br>
+                Défiez jusqu'à 12 joueurs en ligne dans des arènes colorées où chaque coup peut faire basculer la
+                partie.<br>
+                Serez-vous le plus rapide, le plus rusé, ou le plus audacieux des Golfslingers ?
+            </p>
+        </section>
+        <section class="gs-infos" id="genres">
+            <div class="gs-infos-block">
+                <h3>Genres</h3>
+                <ul>
+                    <li><strong>Action</strong></li>
+                    <li><strong>Occasionnel</strong></li>
+                    <li><strong>Indépendant</strong></li>
+                    <li><strong>Course automobile</strong></li>
+                    <li><strong>Sport</strong></li>
+                    <li><strong>Accès anticipé</strong></li>
+                </ul>
+            </div>
+            <div class="gs-infos-block" id="date">
+                <h3>Date de sortie en accès anticipé</h3>
+                <p><strong>10 janvier 2025</strong></p>
+            </div>
+        </section>
+        <section class="gs-config" id="config">
+            <h2>Configuration requise</h2>
+            <div class="gs-config-tables">
+                <div class="gs-config-table">
+                    <h4>Minimale</h4>
+                    <ul>
+                        <li><strong>Système d'exploitation :</strong> Windows 7</li>
+                        <li><strong>Processeur :</strong> i5</li>
+                        <li><strong>Mémoire vive :</strong> 8 GB</li>
+                        <li><strong>Graphiques :</strong> RTX 2050</li>
+                        <li><strong>Espace disque :</strong> 2 GB disponibles</li>
+                    </ul>
+                </div>
+                <div class="gs-config-table">
+                    <h4>Recommandée</h4>
+                    <ul>
+                        <li><strong>Système d'exploitation :</strong> Windows 11</li>
+                        <li><strong>Processeur :</strong> i7</li>
+                        <li><strong>Mémoire vive :</strong> 16 GB</li>
+                        <li><strong>Graphiques :</strong> RTX 3060</li>
+                        <li><strong>Réseau :</strong> connexion internet haut débit</li>
+                        <li><strong>Espace disque :</strong> 4 GB disponibles</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section class="gs-ambiance" id="ambiance">
+            <h2>Ambiance visuelle</h2>
+            <div class="gs-ambiance-imgs">
+                <iframe src="https://www.youtube.com/embed/AoelkOv0kUU" title="GolfSlinger Shorts" allowfullscreen
+                    class="gs-ambiance-video"></iframe>
+            </div>
+        </section>
+        <section class="gs-gameplay" id="gameplay">
+            <h2>Gameplay</h2>
+            <div class="gs-carousel">
+                <button class="gs-carousel-btn gs-carousel-btn-prev" aria-label="Précédent">&#8592;</button>
+                <div class="gs-carousel-videos">
+                    <iframe class="gs-carousel-video" src="https://www.youtube.com/embed/vkJhJB0osC0" title="Short 1"
+                        allowfullscreen></iframe>
+                    <iframe class="gs-carousel-video" src="https://www.youtube.com/embed/Mu7y8tNXZvI" title="Short 2"
+                        allowfullscreen></iframe>
+                    <iframe class="gs-carousel-video" src="https://www.youtube.com/embed/pZbdal_FoTQ" title="Short 3"
+                        allowfullscreen></iframe>
+                    <iframe class="gs-carousel-video" src="https://www.youtube.com/embed/x-KxESYOrqY" title="Short 4"
+                        allowfullscreen></iframe>
+                </div>
+                <button class="gs-carousel-btn gs-carousel-btn-next" aria-label="Suivant">&#8594;</button>
+            </div>
+        </section>
+    </main>
+    <footer class="gs-footer">
+        <p>&copy; 2024 GolfSlinger - Chaos Cactus</p>
+    </footer>
+    <img src="images_golfslinger/Icone_Pepite.png" alt="Remonter en haut" id="scrollTopBtn"
+        style="position:fixed;bottom:32px;right:32px;width:60px;height:60px;cursor:pointer;z-index:1000;box-shadow:0 2px 8px #0005;border-radius:50%;background:#fff8;backdrop-filter:blur(2px);padding:8px;transition:opacity 0.3s;opacity:0.7;" />
+    <script src="script-golfslinger.js"></script>
+</body>
+
+</html>
