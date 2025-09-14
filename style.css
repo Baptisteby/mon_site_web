@@ -899,21 +899,15 @@ main {
 @media (max-width: 1200px) {
     .presentation-container {
         padding: 60px 40px;
-        max-width: 1200px;
     }
 
     .game-title {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
+        font-size: 3.5rem;
         margin-bottom: 40px;
     }
 
     .game-description {
-        font-size: clamp(1rem, 1.5vw, 1.1rem);
-        max-width: 500px;
-    }
-
-    .presentation-media {
-        max-width: 600px;
+        font-size: 1.1rem;
     }
 }
 
@@ -1022,111 +1016,6 @@ main {
     }
 }
 
-/* Responsive pour les cartes d'équipe */
-@media (max-width: 1024px) {
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        padding: 15px;
-    }
-
-    .team-card {
-        height: 380px;
-    }
-
-    .member-image {
-        width: 100px;
-        height: 100px;
-    }
-
-    .member-name {
-        font-size: 1.6rem;
-    }
-
-    .member-role {
-        font-size: 1.1rem;
-    }
-}
-
-@media (max-width: 768px) {
-    .team-members-section {
-        padding: 30px 15px;
-    }
-
-    .section-title {
-        font-size: clamp(2.5rem, 6vw, 3.5rem);
-        margin-bottom: 40px;
-    }
-
-    .team-grid {
-        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-        gap: 25px;
-        padding: 10px;
-    }
-
-    .team-card {
-        height: 350px;
-    }
-
-    .member-image {
-        width: 90px;
-        height: 90px;
-    }
-
-    .member-name {
-        font-size: 1.4rem;
-    }
-
-    .member-role {
-        font-size: 1rem;
-    }
-
-    .member-bio {
-        font-size: 1rem;
-        line-height: 1.5;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-members-section {
-        padding: 20px 10px;
-    }
-
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 5px;
-    }
-
-    .team-card {
-        height: 320px;
-    }
-
-    .member-image {
-        width: 80px;
-        height: 80px;
-    }
-
-    .member-name {
-        font-size: 1.2rem;
-    }
-
-    .member-role {
-        font-size: 0.9rem;
-    }
-
-    .member-bio {
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-
-    .member-social .social-link {
-        width: 35px;
-        height: 35px;
-        font-size: 1rem;
-    }
-}
-
 /* Styles corrigés pour la section Notre Équipe */
 .team-members-section {
     position: relative;
@@ -1179,8 +1068,6 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 40px;
     padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
 }
 
 /* Correction des styles pour les cartes d'équipe */
@@ -1393,7 +1280,9 @@ main {
 @media (max-width: 1200px) {
     .chaos-reactor {
         min-height: 120vh;
+        /* Augmentation de la hauteur minimale */
         height: auto;
+        /* Permet à la section de s'étendre si nécessaire */
     }
 
     .chaos-reactor .presentation-container {
@@ -1401,7 +1290,6 @@ main {
         padding: 60px 20px;
         height: auto;
         min-height: 100%;
-        max-width: 1000px;
     }
 
     .chaos-reactor .presentation-text {
@@ -1409,9 +1297,6 @@ main {
         order: 1;
         text-align: center;
         margin-bottom: 40px;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .chaos-reactor .presentation-media {
@@ -1425,7 +1310,9 @@ main {
     .chaos-reactor .video-container {
         height: auto;
         aspect-ratio: 16/9;
+        /* Maintient le ratio de la vidéo */
         max-height: none;
+        /* Supprime la limite de hauteur */
     }
 
     .project-features {
@@ -1434,7 +1321,6 @@ main {
 
     .project-features ul {
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
     }
 }
 

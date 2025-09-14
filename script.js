@@ -85,38 +85,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Gestion du scroll avec la molette (désactivé sur mobile pour éviter les conflits)
+    // Gestion du scroll avec la molette
     let lastScrollTime = 0;
     const scrollCooldown = 1000; // 1 seconde de délai entre les scrolls
 
-    // Détecter si l'utilisateur est sur mobile
-    const isMobile = window.innerWidth <= 768;
+    window.addEventListener('wheel', (e) => {
+        const now = Date.now();
+        if (now - lastScrollTime < scrollCooldown) {
+            return;
+        }
 
-    if (!isMobile) {
-        window.addEventListener('wheel', (e) => {
-            const now = Date.now();
-            if (now - lastScrollTime < scrollCooldown) {
-                return;
+        const currentSection = Array.from(sections).find(section => {
+            const rect = section.getBoundingClientRect();
+            return rect.top >= -window.innerHeight / 2 && rect.top <= window.innerHeight / 2;
+        });
+
+        if (currentSection) {
+            e.preventDefault();
+            const currentIndex = Array.from(sections).indexOf(currentSection);
+            const direction = e.deltaY > 0 ? 1 : -1;
+            const nextIndex = currentIndex + direction;
+
+            if (nextIndex >= 0 && nextIndex < sections.length) {
+                scrollToSection(sections[nextIndex]);
+                lastScrollTime = now;
             }
-
-            const currentSection = Array.from(sections).find(section => {
-                const rect = section.getBoundingClientRect();
-                return rect.top >= -window.innerHeight / 2 && rect.top <= window.innerHeight / 2;
-            });
-
-            if (currentSection) {
-                e.preventDefault();
-                const currentIndex = Array.from(sections).indexOf(currentSection);
-                const direction = e.deltaY > 0 ? 1 : -1;
-                const nextIndex = currentIndex + direction;
-
-                if (nextIndex >= 0 && nextIndex < sections.length) {
-                    scrollToSection(sections[nextIndex]);
-                    lastScrollTime = now;
-                }
-            }
-        }, { passive: false });
-    }
+        }
+    }, { passive: false });
 
     // Mise à jour des points de navigation actifs
     const updateActiveNav = () => {
@@ -311,43 +306,6 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', () => {
         requestAnimationFrame(updateScrollIndicator);
     });
-
-    // Gestion responsive pour les événements tactiles
-    let touchStartY = 0;
-    let touchEndY = 0;
-
-    if (isMobile) {
-        document.addEventListener('touchstart', (e) => {
-            touchStartY = e.changedTouches[0].screenY;
-        }, { passive: true });
-
-        document.addEventListener('touchend', (e) => {
-            touchEndY = e.changedTouches[0].screenY;
-            handleSwipe();
-        }, { passive: true });
-
-        function handleSwipe() {
-            const swipeThreshold = 50;
-            const diff = touchStartY - touchEndY;
-
-            if (Math.abs(diff) > swipeThreshold) {
-                const currentSection = Array.from(sections).find(section => {
-                    const rect = section.getBoundingClientRect();
-                    return rect.top >= -window.innerHeight / 2 && rect.top <= window.innerHeight / 2;
-                });
-
-                if (currentSection) {
-                    const currentIndex = Array.from(sections).indexOf(currentSection);
-                    const direction = diff > 0 ? 1 : -1; // Swipe up = next section, swipe down = previous section
-                    const nextIndex = currentIndex + direction;
-
-                    if (nextIndex >= 0 && nextIndex < sections.length) {
-                        scrollToSection(sections[nextIndex]);
-                    }
-                }
-            }
-        }
-    }
 
     // Initialiser l'indicateur au chargement
     document.addEventListener('DOMContentLoaded', () => {
