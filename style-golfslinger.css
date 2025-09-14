@@ -1,0 +1,1069 @@
+body {
+    background: linear-gradient(135deg, #F5DEB3 0%, #FF8C42 100%);
+    color: #222;
+    font-family: 'Staatliches', 'Georgia', 'Times New Roman', serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 1.25rem;
+}
+
+.gs-header,
+.gs-header-main,
+.gs-header-content,
+.gs-btns-header,
+.gs-presentation,
+.gs-infos,
+.gs-infos-block,
+.gs-config,
+.gs-config-tables,
+.gs-config-table,
+.gs-ambiance,
+.gs-ambiance-imgs,
+.gs-footer {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.gs-header-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gs-btns-header {
+    justify-content: center;
+}
+
+.gs-infos {
+    background: #fff7efcc;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #8B5C2A33;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    border: 3px solid #8B5C2A;
+    margin-bottom: 2.5em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+}
+
+.gs-infos-block {
+    min-width: 180px;
+}
+
+.gs-infos-block ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.gs-infos-block h3 {
+    color: #8B5C2A;
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.7em;
+}
+
+.gs-config-tables {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    margin: 2em 0;
+}
+
+.gs-config-table {
+    min-width: 200px;
+    text-align: center;
+}
+
+.gs-config-table ul {
+    padding-left: 0;
+    list-style: none;
+}
+
+.gs-config-table h4 {
+    color: #8B5C2A;
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.7em;
+}
+
+.gs-ambiance-imgs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-footer {
+    text-align: center;
+}
+
+.gs-header {
+    background: #8B5C2A;
+    color: #F5DEB3;
+    text-align: center;
+    padding: 2rem 1rem 1rem 1rem;
+    border-bottom: 6px double #FF8C42;
+    box-shadow: 0 4px 24px #0004;
+    position: relative;
+    overflow: visible;
+    z-index: 100;
+}
+
+.gs-header-animated-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+    background: radial-gradient(circle at 60% 40%, #ffe6b0 0%, #ffb86b 40%, #ff8c42 70%, #8B5C2A 100%);
+    opacity: 1;
+    animation: headerBgMove 12s ease-in-out infinite alternate;
+    overflow: hidden;
+}
+
+.gs-header-animated-bg .particle {
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.45;
+    background: radial-gradient(circle, #fffbe6 0%, #ffd27e 60%, #ff8c4200 100%);
+    animation: particleFloat 7s linear infinite;
+    will-change: transform, opacity;
+}
+
+@keyframes headerBgMove {
+    0% {
+        background-position: 60% 40%;
+    }
+
+    50% {
+        background-position: 40% 60%;
+    }
+
+    100% {
+        background-position: 60% 40%;
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.45;
+    }
+
+    50% {
+        transform: translateY(-40px) scale(1.2);
+        opacity: 0.7;
+    }
+
+    100% {
+        transform: translateY(0) scale(1);
+        opacity: 0.45;
+    }
+}
+
+@keyframes stripes-move {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 320px 0;
+    }
+}
+
+.western-flicker {
+    animation: flicker 2.2s infinite alternate;
+}
+
+@keyframes flicker {
+
+    0%,
+    100% {
+        text-shadow: 0 4px 24px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 32px #fff4;
+        opacity: 1;
+    }
+
+    10% {
+        text-shadow: 0 4px 32px #FF8C42, 2px 2px 0 #2d1e13, 0 0 40px #fff8;
+        opacity: 0.95;
+    }
+
+    20% {
+        text-shadow: 0 4px 18px #FF8C4299, 2px 2px 0 #2d1e13, 0 0 24px #fff4;
+        opacity: 0.92;
+    }
+
+    30% {
+        text-shadow: 0 4px 28px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 36px #fff6;
+        opacity: 1;
+    }
+
+    40% {
+        text-shadow: 0 4px 24px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 32px #fff4;
+        opacity: 0.98;
+    }
+
+    50% {
+        text-shadow: 0 4px 40px #FF8C42, 2px 2px 0 #2d1e13, 0 0 48px #fff8;
+        opacity: 1;
+    }
+
+    60% {
+        text-shadow: 0 4px 24px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 32px #fff4;
+        opacity: 0.97;
+    }
+
+    70% {
+        text-shadow: 0 4px 18px #FF8C4299, 2px 2px 0 #2d1e13, 0 0 24px #fff4;
+        opacity: 0.93;
+    }
+
+    80% {
+        text-shadow: 0 4px 28px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 36px #fff6;
+        opacity: 1;
+    }
+
+    90% {
+        text-shadow: 0 4px 24px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 32px #fff4;
+        opacity: 0.99;
+    }
+}
+
+.gs-header-subtitle {
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 1.25rem;
+    color: #fff7ef;
+    letter-spacing: 2px;
+    margin-bottom: 1.5em;
+    text-shadow: 0 2px 8px #8B5C2A88, 1px 1px 0 #FF8C42;
+    animation: fade-in-up 1.2s 0.7s both;
+}
+
+.gs-header h1 {
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 2.8rem;
+    letter-spacing: 2px;
+    margin: 0.2em 0 0.1em 0;
+    text-shadow: 2px 2px 0 #FF8C42, 4px 4px 0 #2222;
+    text-transform: uppercase;
+}
+
+.gs-slogan {
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 1.2rem;
+    color: #FF8C42;
+    margin: 0.2em 0 0 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 0 #fff8;
+}
+
+.gs-btn-steam,
+.gs-btn-yt {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7em;
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 1.15rem;
+    padding: 0.8em 1.7em;
+    border-radius: 30px;
+    border: 2.5px solid #222;
+    text-decoration: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 8px #8B5C2A44;
+    margin: 0.2em 0.5em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s, border 0.2s;
+    text-shadow: 1px 1px 0 #2228;
+}
+
+.gs-btn-steam {
+    background: linear-gradient(90deg, #222 60%, #8B5C2A 100%);
+    color: #fff;
+    border-color: #FF8C42;
+}
+
+.gs-btn-steam:hover {
+    background: linear-gradient(90deg, #FF8C42 60%, #8B5C2A 100%);
+    color: #fff7ef;
+    box-shadow: 0 0 16px #FF8C4288, 0 0 0 2px #8B5C2A;
+    border-color: #fff;
+}
+
+.gs-btn-yt {
+    background: linear-gradient(90deg, #FF0000 60%, #8B5C2A 100%);
+    color: #fff;
+    border-color: #FF8C42;
+}
+
+.gs-btn-yt:hover {
+    background: linear-gradient(90deg, #8B5C2A 60%, #FF0000 100%);
+    color: #fff7ef;
+    box-shadow: 0 0 16px #FF8C4288, 0 0 0 2px #8B5C2A;
+    border-color: #fff;
+}
+
+.gs-btn-icon {
+    width: 1.7em;
+    height: 1.7em;
+    vertical-align: middle;
+    border-radius: 6px;
+    background: #fff2;
+    box-shadow: 0 1px 4px #0003;
+}
+
+main {
+    max-width: 1400px;
+    margin: 2.5rem auto;
+    background: #fff7efcc;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #8B5C2A33;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    border: 3px solid #8B5C2A;
+}
+
+.gs-presentation h2,
+.gs-gallery h2,
+.gs-cta h2 {
+    font-family: 'Staatliches', 'Georgia', serif;
+    color: #8B5C2A;
+    font-size: 2rem;
+    margin-bottom: 0.7em;
+    text-shadow: 1px 1px 0 #FF8C42, 2px 2px 0 #fff4;
+    text-transform: uppercase;
+}
+
+.gs-presentation p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: #222;
+    margin-bottom: 2em;
+}
+
+.gs-gallery {
+    margin: 2.5em 0;
+}
+
+.gs-gallery-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.gs-card {
+    background: #F5DEB3;
+    border: 3px solid #8B5C2A;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #8B5C2A33, 0 0 0 6px #FF8C4211;
+    padding: 1.2em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 170px;
+    min-height: 220px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+}
+
+.gs-card img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid #FF8C42;
+    background: #fff7ef;
+    margin-bottom: 0.7em;
+    box-shadow: 0 2px 8px #8B5C2A22;
+}
+
+.gs-card span {
+    font-family: 'Staatliches', 'Georgia', serif;
+    color: #8B5C2A;
+    font-size: 1.1rem;
+    margin-top: 0.5em;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.gs-card:hover {
+    transform: scale(1.05) rotate(-1deg);
+    box-shadow: 0 8px 32px #FF8C4288, 0 0 0 6px #8B5C2A22;
+    border-color: #FF8C42;
+}
+
+.gs-cta {
+    text-align: center;
+    margin-top: 2.5em;
+}
+
+.gs-footer {
+    background: #8B5C2A;
+    color: #F5DEB3;
+    text-align: center;
+    padding: 1.2em 0 1em 0;
+    font-size: 1rem;
+    border-top: 4px double #FF8C42;
+    margin-top: 2em;
+    letter-spacing: 1px;
+}
+
+@media (max-width: 900px) {
+    .gs-gallery-cards {
+        gap: 1em;
+    }
+
+    .gs-card {
+        width: 45vw;
+        min-width: 120px;
+        min-height: 180px;
+    }
+
+    .gs-gameplay {
+        padding: 1.2rem 0.2rem 1rem 0.2rem;
+    }
+
+    .gs-carousel-videos {
+        gap: 0.5em;
+    }
+
+    .gs-carousel-video,
+    .gs-carousel-video.active {
+        width: 38vw;
+        min-width: 140px;
+        max-width: 180px;
+        height: 56vw;
+        min-height: 180px;
+        max-height: 300px;
+    }
+}
+
+@media (max-width: 700px) {
+    main {
+        padding: 1.2rem 0.5rem;
+    }
+
+    .gs-header h1 {
+        font-size: 2rem;
+    }
+
+    .gs-card {
+        width: 90vw;
+        min-width: 100px;
+        min-height: 120px;
+    }
+
+    .gs-card img {
+        width: 70px;
+        height: 70px;
+    }
+
+    .gs-ambiance-video {
+        max-width: 98vw;
+        min-height: 220px;
+    }
+
+    .gs-gameplay {
+        padding: 0.5rem 0 0.5rem 0;
+    }
+
+    .gs-carousel {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .gs-carousel-videos {
+        width: 100vw;
+        overflow-x: auto;
+        justify-content: flex-start;
+        gap: 0.3em;
+        padding-bottom: 0.5em;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .gs-carousel-video,
+    .gs-carousel-video.active {
+        width: 70vw;
+        min-width: 120px;
+        max-width: 180px;
+        height: 40vw;
+        min-height: 120px;
+        max-height: 220px;
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    .gs-carousel-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 1.3rem;
+        margin: 0.2em 0;
+    }
+}
+
+.gs-header-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5em;
+    margin-bottom: 0.5em;
+}
+
+.gs-user-avatar {
+    position: relative;
+    width: 64px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gs-avatar-frame {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    z-index: 2;
+    pointer-events: none;
+}
+
+.gs-avatar-img {
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: 1;
+    border: 2px solid #8B5C2A;
+    background: #fff7ef;
+}
+
+.gs-btn-profile {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    background: #F5DEB3;
+    color: #8B5C2A;
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 1.1rem;
+    padding: 0.5em 1.2em;
+    border-radius: 22px;
+    border: 2px solid #8B5C2A;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #8B5C2A22;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+}
+
+.gs-btn-profile-icon {
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+}
+
+.gs-btn-profile:hover {
+    background: #FF8C42;
+    color: #fff;
+    box-shadow: 0 0 12px #FF8C4288;
+}
+
+.gs-separator {
+    display: flex;
+    justify-content: center;
+    margin: 2em 0 2.5em 0;
+}
+
+.gs-separator img {
+    width: 60px;
+    height: 60px;
+    opacity: 0.7;
+    filter: drop-shadow(0 2px 8px #8B5C2A44);
+}
+
+.gs-video {
+    margin: 2.5em 0 2em 0;
+    text-align: center;
+}
+
+.gs-video h2 {
+    font-family: 'Staatliches', 'Georgia', serif;
+    color: #8B5C2A;
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    text-shadow: 1px 1px 0 #FF8C42, 2px 2px 0 #fff4;
+    text-transform: uppercase;
+}
+
+.gs-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
+    padding-bottom: 177%;
+    /* 9:16 ratio for Shorts */
+    height: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px #8B5C2A33, 0 0 0 6px #FF8C4211;
+    background: #000;
+}
+
+.gs-video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 18px;
+}
+
+.gs-presentation,
+.gs-config,
+.gs-ambiance {
+    background: #fff7efcc;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #8B5C2A33;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    border: 3px solid #8B5C2A;
+    margin-bottom: 2.5em;
+}
+
+.gs-ambiance-video {
+    width: 100%;
+    max-width: 900px;
+    min-height: 500px;
+    aspect-ratio: 16/9;
+    border-radius: 18px;
+    box-shadow: 0 4px 24px #8B5C2A33, 0 0 0 6px #FF8C4211;
+    margin-bottom: 1.2em;
+    background: #000;
+    display: block;
+}
+
+@media (max-width: 1000px) {
+    .gs-ambiance-video {
+        max-width: 98vw;
+        min-height: 220px;
+    }
+}
+
+.gs-presentation h2,
+.gs-config h2,
+.gs-ambiance h2 {
+    font-family: 'Staatliches', 'Georgia', serif;
+    color: #8B5C2A;
+    font-size: 2.2rem;
+    margin-bottom: 0.7em;
+    text-shadow: 1px 1px 0 #FF8C42, 2px 2px 0 #fff4;
+    text-transform: uppercase;
+}
+
+.gs-gameplay {
+    background: #fff7efcc;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #8B5C2A33;
+    padding: 2.5rem 1.5rem 2rem 1.5rem;
+    border: 3px solid #8B5C2A;
+    margin: 2.5em 0;
+    text-align: center;
+}
+
+.gs-gameplay h2 {
+    font-family: 'Staatliches', 'Georgia', serif;
+    font-size: 2rem;
+    color: #8B5C2A;
+    margin-bottom: 1.2em;
+    letter-spacing: 1px;
+}
+
+.gs-carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+    margin-top: 1em;
+    perspective: 1200px;
+    position: relative;
+    height: 600px;
+}
+
+.gs-carousel-videos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1.5em;
+    position: relative;
+    pointer-events: none;
+}
+
+.gs-carousel-video {
+    width: 220px;
+    height: 390px;
+    border-radius: 16px;
+    border: 3px solid #8B5C2A;
+    box-shadow: 0 4px 24px #8B5C2A33;
+    background: #000;
+    transition: transform 0.5s cubic-bezier(.4, 2, .3, 1), opacity 0.4s, box-shadow 0.4s, z-index 0s;
+    opacity: 0.7;
+    z-index: 1;
+    pointer-events: auto;
+    transform: scale(0.85) perspective(600px) rotateY(10deg);
+}
+
+.gs-carousel-video.active {
+    transform: scale(1.1) perspective(600px) rotateY(0deg);
+    opacity: 1;
+    z-index: 3;
+    box-shadow: 0 8px 32px #FF8C4288, 0 0 0 4px #8B5C2A;
+}
+
+.gs-carousel-video.not-active {
+    opacity: 0.6;
+    z-index: 1;
+    transform: scale(0.85) perspective(600px) rotateY(10deg);
+    box-shadow: 0 2px 8px #8B5C2A33;
+}
+
+.gs-carousel-btn {
+    background: #FF8C42;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    font-size: 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px #8B5C2A44;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    position: relative;
+}
+
+.gs-carousel-btn:hover {
+    background: #8B5C2A;
+    color: #FF8C42;
+}
+
+@media (max-width: 1000px) {
+    .gs-carousel-videos {
+        gap: 0.5em;
+    }
+
+    .gs-carousel-video,
+    .gs-carousel-video.active {
+        width: 90vw;
+        max-width: 220px;
+        height: 56vw;
+        max-height: 390px;
+    }
+}
+
+/* Animations pour golfslinger.html */
+@keyframes pop-in {
+    0% {
+        transform: scale(0.7) rotate(-8deg);
+        opacity: 0;
+    }
+
+    60% {
+        transform: scale(1.15) rotate(3deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1) rotate(0);
+        opacity: 1;
+    }
+}
+
+.animate-pop {
+    animation: pop-in 0.8s cubic-bezier(.68, -0.55, .27, 1.55) 0.1s both;
+}
+
+@keyframes fade-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.gs-title-animated {
+    animation: fade-in-up 0.8s 0.2s both;
+}
+
+.gs-slogan-animated {
+    animation: fade-in-up 0.8s 0.5s both;
+}
+
+.gs-presentation-animated {
+    animation: fade-in-up 1s 0.8s both;
+}
+
+.gs-header-modern {
+    background: linear-gradient(120deg, #2d1e13 0%, #8B5C2A 60%, #FF8C42 100%);
+    box-shadow: 0 8px 32px #8B5C2A55, 0 2px 0 #FF8C42;
+    border-radius: 0 0 48px 48px;
+    padding: 2.5rem 1rem 2.5rem 1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.gs-header-modern::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 120%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 0%, #fff8 0%, transparent 70%);
+    transform: translateX(-50%);
+    opacity: 0.18;
+    pointer-events: none;
+}
+
+.gs-header-content {
+    z-index: 2;
+    position: relative;
+}
+
+.gs-title-animated {
+    font-size: 3.5rem;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #fff;
+    text-shadow: 0 4px 24px #FF8C42cc, 2px 2px 0 #2d1e13, 0 0 32px #fff4;
+    margin-bottom: 0.2em;
+}
+
+.gs-slogan-animated {
+    font-size: 1.5rem;
+    color: #FF8C42;
+    text-shadow: 0 2px 8px #fff8, 1px 1px 0 #2d1e13;
+    margin-bottom: 1.2em;
+}
+
+.gs-header-modern .gs-btns-header {
+    margin-top: 1.5em;
+}
+
+.gs-header-modern .gs-btn-steam,
+.gs-header-modern .gs-btn-yt {
+    font-size: 1.2rem;
+    padding: 1em 2.2em;
+    border-radius: 40px;
+    margin: 0 0.7em;
+    box-shadow: 0 4px 16px #FF8C4244, 0 0 0 2px #fff2;
+}
+
+.gs-header-modern .gs-btn-steam:hover,
+.gs-header-modern .gs-btn-yt:hover {
+    filter: brightness(1.1) drop-shadow(0 0 8px #fff8);
+}
+
+.gs-header-modern::after {
+    content: '';
+    display: block;
+    width: 120px;
+    height: 8px;
+    background: linear-gradient(90deg, #FF8C42 0%, #fff 50%, #8B5C2A 100%);
+    border-radius: 8px;
+    margin: 2.5em auto 0 auto;
+    opacity: 0.7;
+}
+
+.gs-burger {
+    position: absolute;
+    top: 54px;
+    right: 48px;
+    z-index: 30;
+    width: 48px;
+    height: 48px;
+    background: none;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: filter 0.2s;
+    padding: 0;
+}
+
+.gs-burger-bar {
+    width: 32px;
+    height: 5px;
+    background: #fff;
+    border-radius: 3px;
+    margin: 4px 0;
+    box-shadow: 0 2px 8px #8B5C2A88;
+    transition: all 0.3s cubic-bezier(.68, -0.55, .27, 1.55);
+    position: relative;
+}
+
+.gs-burger[aria-expanded="true"] .gs-burger-bar:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+}
+
+.gs-burger[aria-expanded="true"] .gs-burger-bar:nth-child(2) {
+    opacity: 0;
+}
+
+.gs-burger[aria-expanded="true"] .gs-burger-bar:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+}
+
+@media (max-width: 700px) {
+    .gs-burger {
+        top: 32px;
+        right: 18px;
+        width: 38px;
+        height: 38px;
+    }
+
+    .gs-burger-bar {
+        width: 22px;
+        height: 4px;
+        margin: 3px 0;
+    }
+
+    .gs-burger[aria-expanded="true"] .gs-burger-bar:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+    }
+
+    .gs-burger[aria-expanded="true"] .gs-burger-bar:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+    }
+}
+
+.gs-nav-menu {
+    position: absolute;
+    top: 100px;
+    right: 48px;
+    max-width: calc(100vw - 32px);
+    max-height: calc(100% - 32px);
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 29;
+    min-width: 220px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-16px) scale(0.98);
+    transition: opacity 0.3s, transform 0.3s;
+    font-family: 'Staatliches', 'Georgia', serif;
+}
+
+.gs-nav-menu[aria-hidden="false"] {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+}
+
+.gs-nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.gs-nav-menu li {
+    margin: 0.7em 0;
+}
+
+.gs-nav-menu a {
+    color: #fff7ef;
+    text-decoration: none;
+    font-size: 1.18rem;
+    letter-spacing: 1.5px;
+    padding: 0.3em 0.7em;
+    border-radius: 8px;
+    display: block;
+    transition: background 0.2s, color 0.2s;
+}
+
+.gs-nav-menu a:hover {
+    background: #FF8C42;
+    color: #2d1e13;
+}
+
+@media (max-width: 700px) {
+    .gs-burger {
+        top: 32px;
+        right: 18px;
+    }
+
+    .gs-burger-bar {
+        width: 22px;
+        height: 4px;
+    }
+
+    .gs-nav-menu {
+        min-width: 140px;
+        padding: 0.7em 1em 0.7em 1em;
+        top: 72px;
+        right: 18px;
+        min-width: 120px;
+        max-width: calc(100vw - 8px);
+        max-height: 60vh;
+    }
+}
+
+@keyframes zoomBounce {
+    0% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.22);
+    }
+
+    80% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1.18);
+    }
+}
+
+#scrollTopBtn {
+    transition: box-shadow 0.2s, opacity 0.2s;
+}
+
+#scrollTopBtn:hover {
+    animation: zoomBounce 0.38s cubic-bezier(.22, 1.61, .36, 1) forwards;
+    box-shadow: 0 8px 28px #0009;
+    opacity: 1;
+}
+
+#scrollTopBtn:not(:hover) {
+    animation: none;
+    transform: scale(1);
+}
