@@ -1,0 +1,226 @@
+/* Optimisations spécifiques pour mobile */
+
+/* Réduction des animations sur mobile pour de meilleures performances */
+@media (max-width: 768px) {
+
+    /* Désactiver certaines animations coûteuses */
+    .mascot:hover {
+        transform: none;
+    }
+
+    .mascot:hover img {
+        filter: none;
+    }
+
+    .value-item:hover {
+        transform: none;
+    }
+
+    .value-item:hover .value-icon {
+        transform: none;
+    }
+
+    .value-item:hover .value-icon i {
+        transform: none;
+    }
+
+    /* Simplifier les transitions */
+    .nav-btn:hover {
+        transform: none;
+    }
+
+    .team-card:hover .card-front,
+    .team-card:hover .card-back {
+        transform: none;
+    }
+
+    /* Optimiser les filtres */
+    .fixed-logo:hover {
+        transform: none;
+    }
+
+    /* Réduire les box-shadows complexes */
+    .team-card {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .member-image {
+        box-shadow: 0 0 15px rgba(255, 51, 102, 0.4);
+    }
+}
+
+/* Optimisations pour les très petits écrans */
+@media (max-width: 480px) {
+
+    /* Désactiver tous les effets hover */
+    *:hover {
+        transform: none !important;
+        filter: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Simplifier les animations de chargement */
+    .wave-cubes-loader .cube {
+        animation-duration: 2s;
+    }
+
+    /* Réduire la complexité des gradients */
+    .hero,
+    .presentation {
+        background: #000;
+    }
+
+    .team-section {
+        background: #1a1a1a;
+    }
+
+    /* Optimiser les vidéos */
+    video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Optimisations pour les écrans haute résolution */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    /* Réduire les détails visuels sur les écrans Retina */
+    .gs-card img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+
+    .member-image img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
+}
+
+/* Optimisations pour les appareils avec peu de mémoire */
+@media (max-width: 768px) {
+
+    /* Réduire la qualité des effets de flou */
+    .menu-overlay {
+        backdrop-filter: blur(2px);
+    }
+
+    .nav-label {
+        backdrop-filter: blur(2px);
+    }
+
+    /* Simplifier les transitions */
+    * {
+        transition-duration: 0.2s !important;
+    }
+}
+
+/* Améliorer l'accessibilité tactile */
+@media (hover: none) and (pointer: coarse) {
+
+    /* Augmenter les zones de clic pour les appareils tactiles */
+    .nav-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .gs-btn-steam,
+    .gs-btn-yt {
+        min-height: 44px;
+        padding: 0.8em 1.5em;
+    }
+
+    .burger-menu {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .menu-button {
+        min-height: 44px;
+        padding: 12px 20px;
+    }
+
+    .gs-carousel-btn {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    .floating-nav li {
+        min-height: 44px;
+    }
+
+    .nav-dot {
+        width: 16px;
+        height: 16px;
+    }
+}
+
+/* Optimisations pour les connexions lentes */
+@media (max-width: 768px) {
+
+    /* Désactiver les préchargements de vidéos */
+    video {
+        preload: none;
+    }
+
+    /* Charger les vidéos seulement quand elles sont visibles */
+    video[data-src] {
+        display: none;
+    }
+}
+
+/* Améliorer la lisibilité sur mobile */
+@media (max-width: 768px) {
+
+    /* Augmenter le contraste des textes */
+    .game-description {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .studio-description {
+        color: #ffffff;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    .member-bio {
+        color: #e0e0e0;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+    }
+
+    /* Améliorer la lisibilité des boutons */
+    .menu-button {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+        font-weight: 700;
+    }
+}
+
+/* Optimisations pour les orientations */
+@media (orientation: portrait) and (max-width: 768px) {
+    .presentation-container {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+
+    .chaos-reactor .presentation-container {
+        padding: 40px 20px;
+        flex-direction: column;
+    }
+}
+
+@media (orientation: landscape) and (max-height: 600px) {
+    .team-members-section {
+        min-height: auto;
+        padding: 20px 15px;
+    }
+
+    .team-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+
+    .team-card {
+        height: 280px;
+    }
+}
